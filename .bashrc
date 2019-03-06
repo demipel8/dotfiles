@@ -24,4 +24,6 @@ glon() {
   git log --oneline -n $lines
 }
 
-alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+export DOCKER_IP=0.0.0.0
+
+alias config="/usr/bin/git --git-dir=/Users/alvaro.martinez/.cfg/ --work-tree=/Users/alvaro.martinez"
