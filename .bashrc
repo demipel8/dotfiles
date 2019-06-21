@@ -39,6 +39,7 @@ alias gcs='git checkout stage'
 alias gcan='git commit --amend --no-edit'
 alias gdc='git diff --cached'
 alias ggpush='git push origin $(current_branch)'
+alias ggpull='git pull origin $(current_branch)'
 
 glon() {
   lines=${1:-5} 
