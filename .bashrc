@@ -26,6 +26,7 @@ alias dc='docker-compose'
 
 alias gohallo='cd ~/code/hallo-matcher'
 
+alias jw='npm run test -- --watchAll'
 alias gs='git status'
 alias ga='git add .'
 alias grm='git rebase master'
@@ -42,7 +43,7 @@ alias ggpush='git push origin $(current_branch)'
 alias ggpull='git pull origin $(current_branch)'
 
 glon() {
-  lines=${1:-5} 
+  lines=${1:-5}
   git log --oneline -n $lines
 }
 
@@ -52,7 +53,7 @@ alias config="/usr/bin/git --git-dir=/Users/alvaro.martinez/.cfg/ --work-tree=/U
 
 complete -W "\`grep -oE '^[a-zA-Z0-9_.-]+:([^=]|$)' Makefile | sed 's/[^a-zA-Z0-9_.-]*$//'\`" make
 
-source ~/.bash_xing
+
 ###-begin-npm-completion-###
 #
 # npm command completion script
@@ -113,3 +114,5 @@ elif type compctl &>/dev/null; then
   compctl -K _npm_completion npm
 fi
 ###-end-npm-completion-###
+export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
+export PATH="/usr/local/opt/mysql-client/bin:$PATH"
